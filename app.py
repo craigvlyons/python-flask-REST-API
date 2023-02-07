@@ -29,7 +29,7 @@ def create_app(db_url=None):
     migrate = Migrate(app, db)
     api = Api(app)
 
-    app.config["JWT_SECRET_KEY"] = "jose"
+    app.config["JWT_SECRET_KEY"] = "SECRET_KEY"  # add key from external file.
     jwt = JWTManager(app)
 
     # @jwt.additional_claims_loader
